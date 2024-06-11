@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.min.css">
+
+    <script src="./map2.js" defer></script>
+    <script src="./mapScript.js" defer></script>
+    <script src="./mapSwitch.js" defer></script>
+    <script src="./pieChart.js" defer></script>
+    <script src="./barChart.js" defer></script>
+
+</head>
+<body onload="callPieCharts()">
+    <header>
+        <h1>Mental Health Data Visualization</h1>
+    </header>
+
+    <div id="map-dropdown">
+        <label for="map-select">Select a map:</label>
+        <select id="map-select">
+            <option value="map1">Participant distribution by country</option>
+            <option value="map2">Stress levels by country</option>
+        </select>
+    </div>
+
+    <div id="controls">
+        <div id="time-slider"></div>
+        <label><input id="all-time-option" type="radio" name="time-option" value="all" checked>Show all time</label>
+        <label><input id="specific-time-option" type="radio" name="time-option" value="specific">Show specific date</label>
+    </div>
+    <div id="visualizations">
+        <div id="map-container"></div>
+        <div id="stress-map-container" style="display: none;"></div> 
+    </div>
+
+    <div id="barchart-section">
+        <div>
+            <label for="category-dropdown">Select a category:</label>
+            <select id="category-dropdown" class="dropdown">
+                <option value="Growing_Stress">Growing Stress</option>
+                <option value="Changes_Habits">Changes in Habits</option>
+                <option value="Mental_Health_History">Mental Health History</option>
+                <option value="Mood_Swings">Mood Swings</option>
+                <option value="Coping_Struggles">Coping Struggles</option>
+                <option value="Work_Interest">Work Interest</option>
+                <option value="Social_Weakness">Social Weakness</option>
+                <option value="mental_health_interview">Mental Health Interview</option>
+                <option value="care_options">Care Options</option>
+            </select>
+        </div>
+        <div>
+            <label for="gender-dropdown">Select gender:</label>
+            <select id="gender-dropdown" class="dropdown">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        
+        <div id="barchart-container"></div>
+    </div>
+
+    <div class="pie-charts-wrapper">
+        <div id="pie-chart-container-1" class="pie-chart-container"></div>
+        <div id="pie-chart-container-2" class="pie-chart-container"></div>
+        <div id="pie-chart-container-3" class="pie-chart-container"></div>
+    </div>
+
+    <div class="pie-charts-wrapper-2">
+        <div id="pie-chart-container-4" class="pie-chart-container"></div>
+        <div id="pie-chart-container-5" class="pie-chart-container"></div>
+        <div id="pie-chart-container-6" class="pie-chart-container"></div>
+    </div>
+
+
+</body>
+

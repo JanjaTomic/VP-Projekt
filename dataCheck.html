@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div id="data-check"></div>
+
+    <script>
+        d3.csv("data.csv").then(function(data) {
+            checkData(data);
+        }).catch(function(error) {
+            console.error("Error loading the CSV file:", error);
+        });
+
+        function checkData(data) {
+            var totalRecords = data.length;
+            var message = "<p>Broj podatkovnih primjera: " + totalRecords + "</p>";
+        
+            var nullValues = 0;
+            var emptyFields = 0;
+        
+            data.forEach(function(d) {
+                Object.keys(d).forEach(function(key) {
+                    if (d[key] === null || d[key] === undefined) {
+                        nullValues++;
+                    }
+                });
+        
+                Object.values(d).forEach(function(value) {
+                    if (value === "") {
+                        emptyFields++;
+                    }
+                });
+            });
+
+            message += "<p>Broj null vrijednosti: " + nullValues + "</p>";
+            message += "<p>Broj praznih polja: " + emptyFields + "</p>";
+        
+            d3.select("#data-check").html(message);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    background-color: #4c7faf;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+#controls {
+    margin: 1em;
+    text-align: center;
+    margin-top: 35px;
+}
+
+#all-time-option{
+    margin-top: 30px;
+}
+
+
+#map-container {
+    width: 75%;
+    margin: 0 auto;
+    padding: 1em;
+    margin-bottom: 5%;
+}
+
+#time-slider {
+    width: 70%; 
+    margin: 0 auto;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+} 
+
+.tooltip {
+    position: absolute;
+    visibility: hidden;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#pie-chart-container-1, #pie-chart-container-2, #pie-chart-container-3, #pie-chart-container-4, #pie-chart-container-5, #pie-chart-container-6  {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pie-chart-container {
+    width: 33%;
+    margin: 0;
+    text-align: center;
+}
+
+.pie-charts-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9%;
+    margin-top: -5%;
+}
+.pie-charts-wrapper-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9%;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+.legend-text {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    fill: #333;
+}
+
+.hover-text {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    fill: #333;
+    font-weight: bold; 
+    pointer-events: none; 
+}
+
+
+.step-line {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #000;
+    width: 1px; 
+}
+
+.date-label {
+    font-size: 10px;
+}
+
+.noUi-tooltip {
+    font-size: 10px;
+}
+
+
+.bar {
+    stroke: #000;
+    stroke-width: 1px;
+}
+
+
+.dropdown {
+    margin-bottom: 20px;
+}
+
+
+.legend rect {
+    stroke-width: 2;
+}
+
+#barchart-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-bottom: 0;
+}
+
+
+#stress-map-container {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 7%;
+    margin-bottom: 5%;
+    padding: 1em;
+}
+
+#map-dropdown{
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+  
